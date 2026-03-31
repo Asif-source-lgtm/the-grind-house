@@ -1,0 +1,107 @@
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background-color: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-card.featured {
+  background: linear-gradient(to bottom, #1a1a1a, var(--bg-card));
+  border-color: rgba(255, 42, 42, 0.5);
+  transform: scale(1.05);
+}
+.pricing-card.featured:hover {
+  transform: scale(1.08);
+}
+.pricing-card:not(.featured):hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-red);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+.pricing-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+.pricing-card.featured .pricing-header h3 {
+  color: #fff;
+}
+
+.pricing-price {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.currency {
+  font-size: 1.5rem;
+  vertical-align: top;
+  margin-right: 0.2rem;
+  color: var(--accent-red);
+}
+
+.amount {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.period {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.pricing-features {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.check-icon {
+  color: var(--accent-red);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+}
