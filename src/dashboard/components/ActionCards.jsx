@@ -1,5 +1,6 @@
 import React from 'react';
 import { CalendarClock, ShieldCheck, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const ActionCards = () => {
   return (
@@ -14,10 +15,10 @@ export const ActionCards = () => {
           <h3 className="text-xl font-bold text-white mb-2">Book a Trainer</h3>
           <p className="text-sm text-text-secondary mb-6 relative z-10">Schedule your next 1-on-1 session with elite coaches to hit your goals faster.</p>
         </div>
-        <button className="flex items-center justify-between w-full mt-auto glass bg-white/5 hover:bg-white/10 border-white/10 px-4 py-3 rounded-xl transition-colors relative z-10">
+        <Link to="/dashboard/trainers" className="flex items-center justify-between w-full mt-auto glass bg-white/5 hover:bg-white/10 border-white/10 px-4 py-3 rounded-xl transition-colors relative z-10">
           <span className="font-semibold text-white">Find Availability</span>
           <ChevronRight size={18} className="text-brand-cyan" />
-        </button>
+        </Link>
       </div>
 
       {/* Membership Status */}
@@ -35,10 +36,10 @@ export const ActionCards = () => {
           <h3 className="text-xl font-bold text-white mb-1">PRO Membership</h3>
           <p className="text-sm text-text-secondary mb-6 relative z-10">Renews automatically on <span className="text-white font-medium">May 15, 2026</span>.</p>
         </div>
-        <button className="flex items-center justify-between w-full mt-auto bg-gradient-to-r from-brand-cyan to-brand-purple hover:opacity-90 px-4 py-3 rounded-xl transition-opacity shadow-lg shadow-brand-purple/20 border border-brand-cyan/50 relative z-10">
+        <Link to="/dashboard/membership" className="flex items-center justify-between w-full mt-auto bg-gradient-to-r from-brand-cyan to-brand-purple hover:opacity-90 px-4 py-3 rounded-xl transition-opacity shadow-lg shadow-brand-purple/20 border border-brand-cyan/50 relative z-10">
           <span className="font-semibold text-white">Manage Subscription</span>
           <ChevronRight size={18} className="text-white" />
-        </button>
+        </Link>
       </div>
     </div>
   );

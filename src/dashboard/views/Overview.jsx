@@ -14,7 +14,7 @@ const Overview = () => {
           <h1 className="text-2xl md:text-3xl font-black text-white tracking-wide mb-1">DASHBOARD</h1>
           <p className="text-text-secondary">Welcome back, {user?.name || 'Athlete'}. Keep up the grind.</p>
         </div>
-        <button className="hidden sm:block px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-semibold hover:bg-white/10 transition-colors">
+        <button onClick={() => alert("Generating your performance report... Download starting soon.")} className="hidden sm:block px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-semibold hover:bg-white/10 transition-colors">
           Download Report
         </button>
       </div>

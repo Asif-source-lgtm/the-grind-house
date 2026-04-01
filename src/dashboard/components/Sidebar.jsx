@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { LayoutDashboard, Activity, Users, CreditCard, Settings, Dumbbell } from 'lucide-react';
 
 const Sidebar = () => {
@@ -47,9 +47,9 @@ const Sidebar = () => {
           <div className="absolute top-0 right-0 w-24 h-24 bg-brand-purple/20 blur-2xl rounded-full translate-x-1/2 -translate-y-1/2 group-hover:bg-brand-purple/30 transition-all"></div>
           <h4 className="font-bold text-sm mb-1 relative z-10">PRO Membership</h4>
           <p className="text-xs text-text-secondary mb-4 relative z-10">Unlock all training analytics.</p>
-          <button className="relative z-10 w-full py-2 rounded-lg bg-gradient-to-r from-brand-cyan to-brand-purple text-sm font-bold shadow-lg shadow-brand-purple/25 hover:opacity-90 transition-opacity">
+          <Link to="/dashboard/membership" className="block text-center relative z-10 w-full py-2 rounded-lg bg-gradient-to-r from-brand-cyan to-brand-purple text-sm font-bold shadow-lg shadow-brand-purple/25 hover:opacity-90 transition-opacity">
             Upgrade Now
-          </button>
+          </Link>
         </div>
       </div>
     </aside>
