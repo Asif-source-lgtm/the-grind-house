@@ -71,10 +71,10 @@ const Membership = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 relative z-10 border-t border-white/5 pt-8">
-            <button className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-purple hover:opacity-90 text-sm font-black shadow-lg shadow-brand-cyan/20 text-white transition-all text-center tracking-wide">
+            <button onClick={() => alert("Redirecting to Stripe secure checkout...")} className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-purple hover:opacity-90 text-sm font-black shadow-lg shadow-brand-cyan/20 text-white transition-all text-center tracking-wide">
               Upgrade Plan
             </button>
-            <button className="px-8 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-sm font-bold text-white transition-colors text-center tracking-wide">
+            <button onClick={() => alert("Opening subscription management portal...")} className="px-8 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-sm font-bold text-white transition-colors text-center tracking-wide">
               Manage Subscription
             </button>
           </div>
@@ -106,7 +106,7 @@ const Membership = () => {
              ))}
            </div>
            
-           <button className="w-full py-4 rounded-xl border-2 border-dashed border-white/10 hover:border-brand-cyan/50 hover:bg-brand-cyan/5 text-sm font-bold text-text-secondary hover:text-white transition-all flex items-center justify-center gap-2 mt-auto relative z-10">
+           <button onClick={() => alert("Opening payment method capture...")} className="w-full py-4 rounded-xl border-2 border-dashed border-white/10 hover:border-brand-cyan/50 hover:bg-brand-cyan/5 text-sm font-bold text-text-secondary hover:text-white transition-all flex items-center justify-center gap-2 mt-auto relative z-10">
              <Plus size={18} /> Add Payment Method
            </button>
         </div>
